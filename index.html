@@ -1,57 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HYROX Volunteer Hub</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="app.js" defer></script>
+  <title>HYROX Volunteer Signup</title>
 </head>
+
 <body>
 
-  <h1>HYROX Volunteer Signup</h1>
+  <header>
+    <h1>HYROX Volunteer Sign-Up Form</h1>
 
-  <form id="volunteerForm">
-    <input
-      type="text"
-      id="name"
-      placeholder="Volunteer Name"
-      required
-      minlength="2"
-    >
+    <p>
+      Join the World Series of Fitness Racing and help create an unforgettable race-day experience for athletes.
+    </p>
 
-    <input
-      type="email"
-      id="email"
-      placeholder="Email"
-      required
-    >
+    <div class="benefits">
+      <h3>Volunteer Benefits</h3>
 
-    <select id="role" required>
-      <option value="">Select Role</option>
-      <option>Registration</option>
-      <option>Course Marshal</option>
-      <option>Water Station</option>
-      <option>Finish Line</option>
-    </select>
+      <ul>
+        <li>Official HYROX Volunteer T-Shirt</li>
+        <li>$20 meal coupon for food and refreshments during your shift</li>
+        <li>Behind-the-scenes event experience</li>
+        <li>Opportunity to support thousands of athletes</li>
+        <li>Official HYROX 2026 volunteer keychain</li>
+        <li>Meet members of the HYROX community</li>
+        <li>$50 official HYROX store coupon for volunteers completing 2 or more shifts</li>
+        <li>Free admission to a HYROX event within the year</li>
+      </ul>
+    </div>
+  </header>
 
-    <button type="submit">Sign Up</button>
-  </form>
+  <main>
 
-  <p id="message"></p>
+    <section class="registration">
 
-  <h2>Total Volunteers: <span id="count">0</span></h2>
+      <h2>Volunteer Registration</h2>
 
-  <label>Filter By Role:</label>
-  <select id="filter">
-    <option value="all">All</option>
-    <option value="Registration">Registration</option>
-    <option value="Course Marshal">Course Marshal</option>
-    <option value="Water Station">Water Station</option>
-    <option value="Finish Line">Finish Line</option>
-  </select>
+      <form id="volunteerForm">
 
-  <div id="volunteerContainer"></div>
+        <div class="volunteerInfo">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" required minlength="2">
+        </div>
 
-  <script src="app.js"></script>
+        <div class="volunteerInfo">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" required minlength="2">
+        </div>
+
+        <div class="volunteerInfo">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="volunteerInfo">
+          <label for="eventDate">Event Date</label>
+          <select id="eventDate" required>
+            <option value="">Select Event Date</option>
+            <option>June 20, 2026</option>
+            <option>July 18, 2026</option>
+            <option>August 22, 2026</option>
+          </select>
+        </div>
+
+        <div class="volunteerInfo">
+          <label for="shift">Volunteer Shift</label>
+          <select id="shift" required>
+            <option value="">Select Shift</option>
+
+            <option>Registration & Packet Pickup</option>
+            <option>Bag Check / Drop</option>
+            <option>Hydration / Aid Station</option>
+            <option>Finish Line & Merchandise</option>
+            <option>Sled Push (Assistant Judge)</option>
+            <option>Farmer's Carry (Assistant Judge)</option>
+            <option>Wall Balls (Assistant Judge)</option>
+            <option>Lunges (Assistant Judge)</option>
+            <option>Sled Pull (Assistant Judge)</option>
+            <option>Ski Erg (Assistant Judge)</option>
+            <option>Burpee Broad Jumps (Assistant Judge)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <button type="submit">Sign Up to Volunteer</button>
+        </div>
+
+      </form>
+
+      <p id="message"></p>
+
+      <div id="shiftInfo">
+        <h3>Shift Description</h3>
+        <p id="shiftDescription">
+          Select a volunteer shift to learn more about the role.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
 </body>
+
 </html>
