@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HYROX Volunteer Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>HYROX Volunteer Signup</h1>
+
+  <form id="volunteerForm">
+    <input
+      type="text"
+      id="name"
+      placeholder="Volunteer Name"
+      required
+      minlength="2"
+    >
+
+    <input
+      type="email"
+      id="email"
+      placeholder="Email"
+      required
+    >
+
+    <select id="role" required>
+      <option value="">Select Role</option>
+      <option>Registration</option>
+      <option>Course Marshal</option>
+      <option>Water Station</option>
+      <option>Finish Line</option>
+    </select>
+
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <p id="message"></p>
+
+  <h2>Total Volunteers: <span id="count">0</span></h2>
+
+  <label>Filter By Role:</label>
+  <select id="filter">
+    <option value="all">All</option>
+    <option value="Registration">Registration</option>
+    <option value="Course Marshal">Course Marshal</option>
+    <option value="Water Station">Water Station</option>
+    <option value="Finish Line">Finish Line</option>
+  </select>
+
+  <div id="volunteerContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
